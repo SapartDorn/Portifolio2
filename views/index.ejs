@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="<%= theme %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Currículo - Leonardo Rocha</title>
+    <meta name="description" content="Currículo de Leonardo Rocha, analista de redes com experiência em suporte remoto e desenvolvimento de soluções.">
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <div class="menu-links">
+                <a class="home1" href="#home">Home</a>
+                <a class="home1" href="#formacao">Formação</a>
+                <a class="home1" href="#habilidades">Habilidades</a>
+                <a class="home1" href="#projetos">Projetos</a>
+                <a class="home1" href="#contato">Contato</a>
+            </div>
+            
+            <!-- Botão de tema permanece fora do menu-links -->
+            <a href="/toggle-theme" class="theme-toggle" style="position:  relative; left: 0px; width: 100px; height: 25px;">
+                <% if (theme === 'dark') { %>
+                    <i class="fas fa-sun"></i> 
+                <% } else { %>
+                    <i class="fas fa-moon"></i>
+                <% } %>
+            </a>
+        </ul>
+    </header>
+
+    <main>
+      <div class="cabeçalho">
+        <div id="home">
+            <span class="typing">Bem vindo</span>
+        </div>
+
+        <div class="titulo1" id="nome">
+            <h3>Meu nome é Leonardo Rocha</h3><br>Estudante de Engenharia de Software🚀🚀
+        </div>
+        
+        <div class="titulo2" id="objetivo">
+            <h3>Sou apaixonado por tecnologia e um verdadeiro entusiasta da programação. Adoro explorar novas ferramentas, aprender linguagens e criar soluções inovadoras. 
+                Para mim, cada código escrito é uma oportunidade de transformar ideias em realidade e superar desafios com criatividade.</h3>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://github.com/SapartDorn" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/leonardor0cha/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://wa.me/35998737666" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+      </div>
+        <div class="formacao" id="formacao">
+            <h2>Formação</h2>
+            <ul>
+                <strong>Universidade Estácio de Sá</strong> - Gestão de Tecnologia da Informação<br>
+                <strong>Universidade Estácio de Sá</strong> - Engenharia de Software
+            </ul>
+        </div>
+
+        <div class="experiencia" id="experiencia">
+            <h2>Experiência</h2>
+            <ul>
+                Analista de Redes (2021 - 2024)<br>
+                Atendimento de suporte remoto de usuários<br>
+                Desenvolvimento Web<br>
+                Inglês intermediário<br>
+            </ul>
+        </div>
+
+        <div class="habilidades" id="habilidades">
+            <h2>Habilidades/Skills</h2>
+            <div class="icons">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+            </div>
+        </div>
+
+        <div class="projetos" id="projetos">
+            <h2>Projetos</h2>
+            <ul>Será atualizado em breve.</ul>
+        </div>
+
+        <div class="contato" id="contato">
+            <h2>Contato</h2>
+            <form class="form-contato" action="mailto:leonardohlss14@gmail.com" method="POST" enctype="text/plain">
+                <div class="form-group">
+                    <input type="text" name="nome" placeholder="Seu Nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Seu E-mail" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="whatsapp" placeholder="Seu WhatsApp" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
