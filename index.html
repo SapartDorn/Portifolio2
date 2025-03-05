@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="<%= theme %>">
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="public/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Currículo - Leonardo Rocha</title>
     <meta name="description" content="Currículo de Leonardo Rocha, analista de redes com experiência em suporte remoto e desenvolvimento de soluções.">
@@ -19,13 +19,9 @@
                 <a class="home1" href="#contato">Contato</a>
             </div>
             
-            <!-- Botão de tema permanece fora do menu-links -->
-            <a href="/toggle-theme" class="theme-toggle" style="position:  relative; left: 0px; width: 100px; height: 25px;">
-                <% if (theme === 'dark') { %>
-                    <i class="fas fa-sun"></i> 
-                <% } else { %>
-                    <i class="fas fa-moon"></i>
-                <% } %>
+            <!-- Botão de tema -->
+            <a href="#" class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
             </a>
         </ul>
     </header>
@@ -109,5 +105,18 @@
             </form>
         </div>
     </main>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            
+            // Atualiza o ícone
+            const icon = document.querySelector('.theme-toggle i');
+            icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+        }
+    </script>
 </body>
 </html>
